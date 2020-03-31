@@ -22,9 +22,9 @@ let package = Package(
             targets: ["ImageSlideshowKingfisher"])
     ],
     dependencies: [
-        .package(url: "https://github.com/onevcat/Kingfisher.git", from: "5.8.0"),
-        .package(url: "https://github.com/Alamofire/AlamofireImage.git", from:"3.6.0"),
-        .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.1.0")
+        .package(url: "https://github.com/onevcat/Kingfisher.git", from: "5.13.2"),
+        .package(url: "https://github.com/Alamofire/AlamofireImage.git", from:"4.0.3"),
+        .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.6.1")
     ],
     targets: [
         .target(
@@ -61,5 +61,5 @@ let package = Package(
             path: "ImageSlideshow/Classes/InputSources",
             sources: ["KingfisherSource.swift"])
     ],
-    swiftLanguageVersions: [.v4, .v4_2, .v5]
+    swiftLanguageVersions: [.v5]
 )

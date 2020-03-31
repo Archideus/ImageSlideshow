@@ -13,18 +13,10 @@ let package = Package(
             targets: ["ImageSlideshow"]),
         .library(
             name: "ImageSlideshow/Alamofire",
-            targets: ["ImageSlideshowAlamofire"]),
-        .library(
-            name: "ImageSlideshow/SDWebImage",
-            targets: ["ImageSlideshowSDWebImage"]),
-        .library(
-            name: "ImageSlideshow/Kingfisher",
-            targets: ["ImageSlideshowKingfisher"])
+            targets: ["ImageSlideshowAlamofire"])
     ],
     dependencies: [
-        .package(url: "https://github.com/onevcat/Kingfisher.git", from: "5.13.2"),
-        .package(url: "https://github.com/Alamofire/AlamofireImage.git", from:"4.0.3"),
-        .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.6.1")
+        .package(url: "https://github.com/Alamofire/AlamofireImage.git", from:"4.0.3")
     ],
     targets: [
         .target(
@@ -49,17 +41,7 @@ let package = Package(
             name: "ImageSlideshowAlamofire",
             dependencies: ["ImageSlideshow", "AlamofireImage"],
             path: "ImageSlideshow/Classes/InputSources",
-            sources: ["AlamofireSource.swift"]),
-        .target(
-            name: "ImageSlideshowSDWebImage",
-            dependencies: ["ImageSlideshow", "SDWebImage"],
-            path: "ImageSlideshow/Classes/InputSources",
-            sources: ["SDWebImageSource.swift"]),
-        .target(
-            name: "ImageSlideshowKingfisher",
-            dependencies: ["ImageSlideshow", "Kingfisher"],
-            path: "ImageSlideshow/Classes/InputSources",
-            sources: ["KingfisherSource.swift"])
+            sources: ["AlamofireSource.swift"])
     ],
     swiftLanguageVersions: [.v5]
 )
